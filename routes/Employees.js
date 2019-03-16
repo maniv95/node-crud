@@ -10,7 +10,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('add_employee',{page_title:"Add Employee - Org"});
+  res.render('add_employees',{page_title:"Add Employee - Org"});
 };
 
 exports.edit = function(req, res){    
@@ -19,7 +19,7 @@ exports.edit = function(req, res){
     var query = connection.query('SELECT * FROM employees WHERE id = ?',[id],function(err,rows){
       if(err)
       console.log("Error Selecting : %s ",err );
-      res.render('edit_employee',{page_title:"Edit Employee",data:rows});        
+      res.render('edit_employees',{page_title:"Edit Employee",data:rows});        
     });
   }); 
 };

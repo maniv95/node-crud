@@ -39,7 +39,7 @@ app.use(
         user: 'root',
         password : '',
         port : 3306, //port mysql
-        database:'test'
+        database:'sampledb'
 
     },'pool') //or single
 
@@ -51,7 +51,7 @@ app.get('/', routes.index);
 app.get('/employees', employees.list);
 app.get('/employees/add', employees.add);
 app.post('/employees/add', employees.save);
-app.get('/employees/delete/:id', employees.delete_customer);
+app.get('/employees/delete/:id', employees.delete_employees);
 app.get('/employees/edit/:id', employees.edit);
 app.post('/employees/edit/:id',employees.save_edit);
 

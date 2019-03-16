@@ -59,7 +59,7 @@ exports.save_edit = function(req,res){
   });
 };
 
-exports.delete_customer = function(req,res){   
+exports.delete_employees = function(req,res){   
   var id = req.params.id;  
   req.getConnection(function (err, connection) {     
     connection.query("DELETE FROM employees  WHERE id = ? ",[id], function(err, rows){
